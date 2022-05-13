@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>TinDog</title>
+
+
+  <!-- Bootstrap CSS and JS files -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  <!-- font awesom api kit to use fonts, I had to create an account to get it -->
+  <script src="https://kit.fontawesome.com/54ca899c22.js" crossorigin="anonymous"></script>
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat:wght@300;400;500;900&family=Sacramento&family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- My CSS file -->
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+  <section id="title">
+
+    <div class="container-fluid">
+      <!-- Nav Bar -->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <!-- bg-dark: took this out because Angela wanted the navbar to be light, or not have a color-->
+        <!-- <div class="container-fluid"> -->
+        <a class="navbar-brand" href="">tindog</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <!-- me-auto : Took this out of the Ul class and added "ms-auto" to center the nav link item text to the
+            right of the nav bar. -->
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#footer">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#pricing">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#cta">Download</a>
+            </li>
+          </ul>
+        </div>
+        <!-- </div> -->
+      </nav>
+
+
+
+      <!-- Title -->
+      <div class="row">
+        <div class="col-lg-6">
+          <h1 class="big-heading">Meet new and interesting dogs nearby.</h1>
+          <button type="button" class="btn btn-dark btn-lg download-button"><i class="fab fa-apple"></i> Download</button>
+          <button type="button" class="btn btn-outline-light btn-lg download-button"><i class="fab fa-google-play"></i> Download</button>
+        </div>
+        <div class="col-lg-6">
+          <img class="title-image" src="images/iphone6.png" alt="iphone-mockup">
+        </div>
+      </div>
+
+
+    </div>
+
+
+
+  </section>
+
+
+  <!-- Features -->
+
+  <section id="features">
+
+
+    <div class="container-fluid ">
+      <div class="row">
+        <div class="col-md-4 col-lg-4 column-elements icon-section">
+          <i class="fas fa-check-circle icon"></i>
+          <!-- Could have used an inline style to control the icon size for font awesome which is apparently
+            fa-(some number on a scale from 2-10)x   Ex: fa-5x -->
+          <h3 class="feature-title">Easy to use.</h3>
+          <p>So easy to use, even your dog could do it.</p>
+        </div>
+
+        <div class="col-md-4 col-lg-4 column-elements icon-section">
+          <i class="fas fa-bullseye icon"></i>
+          <h3 class="feature-title">Elite Clientele</h3>
+          <p>We have all the dogs, the greatest dogs.</p>
+        </div>
+
+        <div class="col-md-4 col-lg-4 column-elements icon-section">
+          <i class="fas fa-heart icon"></i>
+          <h3 class="feature-title">Guaranteed to work.</h3>
+          <p>Find the love of your dog's life or your money back.</p>
+        </div>
+
+        <!--end of row div    -->
+      </div>
+
+      <!--end of container div-->
+    </div>
+
+
+  </section>
+
+
+  <!-- Testimonials -->
+
+  <section id="testimonials">
+
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="false">
+      <div class="carousel-inner">
+
+        <!--Need to have "active" in the carousel item class so that the carousel can
+      function and so that it knows which slide to display first-->
+        <div class="carousel-item active container-fluid">
+          <!-- <img src="..." class="d-block w-100" alt="first slide"> -->
+          <h2 class="testimonial-text">I no longer have to sniff other dogs for love. I've found the hottest Corgi on TinDog. Woof.</h2>
+          <img class="testimonial-image" src="images/dog-img.jpg" alt="dog-profile">
+          <em>Pebbles, New York</em>
+        </div>
+        <div class="carousel-item container-fluid">
+          <!-- <img src="..." class="d-block w-100" alt="second-slide"> -->
+          <h2 class="testimonial-text">My dog used to be so lonely, but with TinDog's help, they've found the love of their life. I think.</h2>
+          <img class="testimonial-image" src="images/lady-img.jpg" alt="lady-profile">
+          <em>Beverly, Illinois</em>
+        </div>
+
+      </div>
+      <!--The carousel buttons needs to have the element "data-bs-target=(ID name of the carouself at the top level)"-->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <!--aria-hidden basically means when a visually impaired person comes across your website, they usually have
+      something called a screen reader. Now with things like buttons, you don't want the screen reader to read out
+      things like, "left button" or "right button". So aria-hidden makes the screen reader skip over things like
+      buttons. Adding controls like this goes into making your website more accessible. -->
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <!-- Now this visually hidden class allows the screen reader to read the word Previous which isn't visible to anyone
+    but will be vocalized by the screen reader -->
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+
+
+
+
+  </section>
+
+
+  <!-- Press -->
+
+  <section id="press">
+    <img class="press-logo" src="images/techcrunch.png" alt="tc-logo">
+    <img class="press-logo" src="images/tnw.png" alt="tnw-logo">
+    <img class="press-logo" src="images/bizinsider.png" alt="biz-insider-logo">
+    <img class="press-logo" src="images/mashable.png" alt="mashable-logo">
+
+  </section>
+
+
+  <!-- Pricing -->
+
+  <section id="pricing">
+
+
+    <div class="container">
+
+      <!-- <div class="pricing-header"> -->
+        <h2 class="section-heading">A Plan for Every Dog's Needs</h2>
+        <p>Simple and affordable price plans for your and your dog.</p>
+      <!-- </div> -->
+
+
+    <!-- <div class=card-group> -->
+
+
+      <div class="row">
+
+
+
+        <div class="col-md-6 col-lg-4 card-padding">
+          <div class="card first-card">
+
+            <div class="card-header">
+              <h3>Chihuahua</h3>
+            </div>
+
+            <div class="card-body">
+
+              <h5 class="card-title">Card Title</h5>
+              <h2 class="price-text">Free</h2>
+              <p>5 Matches Per Day</p>
+              <p>10 Messages Per Day</p>
+              <p>Unlimited App Usage</p>
+              <button class="btn btn-outline-dark btn-lg pricing-btn" type="button">Sign Up</button>
+              <!-- <a href="#" class="btn btn-outline-dark btn-lg pricing-btn">Go somewhere</a> -->
+
+              <!-- end of card body -->
+            </div>
+
+            <!-- end of main card div -->
+          </div>
+
+          <!-- end of first column -->
+        </div>
+
+
+
+        <div class="col-md-6 col-lg-4 card-padding">
+          <div class="card second-card">
+
+            <div class="card-header">
+              <h3>Labrador</h3>
+            </div>
+
+            <div class="card-body">
+
+              <h5 class="card-title">Card Title</h5>
+              <h2 class="price-text">$49 / mo</h2>
+              <p>Unlimited Matches</p>
+              <p>Unlimited Messages</p>
+              <p>Unlimited App Usage</p>
+              <button class="btn btn-dark btn-lg pricing-btn"type="button">Sign Up</button>
+              <!-- <a href="#" class="btn btn-dark btn-lg pricing-btn">Go somewhere</a> -->
+
+
+              <!-- end of card body -->
+            </div>
+
+            <!-- end of main card div -->
+          </div>
+        </div>
+
+
+        <div class="col-md-12 col-lg-4 card-padding">
+          <div class="card third-card">
+
+            <div class="card-header">
+              <h3>Mastiff</h3>
+            </div>
+
+            <div class="card-body">
+
+              <h5 class="card-title">Card Title</h5>
+              <h2 class="price-text">$99 / mo</h2>
+              <p>Pirority Listing</p>
+              <p>Unlimited Matches</p>
+              <p>Unlimited Messages</p>
+              <p>Unlimited App Usage</p>
+              <button class="btn btn-dark btn-lg pricing-btn"type="button">Sign Up</button>
+              <!-- <a href="#" class="btn btn-dark btn-lg pricing-btn">Go somewhere</a> -->
+
+              <!-- end of card body -->
+            </div>
+
+            <!-- end of main card div -->
+          </div>
+
+        </div>
+
+
+
+      <!-- end of row div -->
+      </div>
+
+
+        <!-- end of card-group div -->
+      <!-- </div> -->
+
+    <!-- end of container div -->
+    </div>
+
+
+
+    <!-- end of pricing section -->
+  </section>
+
+
+  <!-- Call to Action -->
+
+  <section id="cta">
+
+    <div class="container-fluid">
+      <!-- Previously had container in the class above -->
+      <h3>Find the True Love of Your Dog's Life Today.</h3>
+      <button class="btn btn-dark btn-lg download-button" type="button"><i class="fab fa-apple"></i> Download</button>
+      <button class="btn btn-outline-light btn-lg download-button" type="button"><i class="fab fa-google-play"></i> Download</button>
+    </div>
+
+
+
+  </section>
+
+
+  <!-- Footer -->
+
+  <footer id="footer">
+
+    <div class="container-fluid">
+      <i class="fab fa-twitter fa-sm"></i>
+      <i class="fab fa-facebook-f fa-sm"></i>
+      <i class="fab fa-instagram fa-sm"></i>
+      <i class="fas fa-envelope fa-sm"></i>
+      <p>© Copyright 2018 TinDog</p>
+    </div>
+
+
+  </footer>
+
+
+</body>
+
+</html>
